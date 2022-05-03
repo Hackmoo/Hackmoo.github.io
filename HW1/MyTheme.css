@@ -1,0 +1,22 @@
+.colorWhite {
+    color: #cccccc;
+}
+
+.MyCenter {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4px;
+    }
+
+.MyEquals{
+text-align: center;
+    font-size: 50px;
+}
+
+.MyEquals2{
+    padding-left: 30px;
+}
+.MyInput {
+  width: 100%;
+    display: flex;
+}

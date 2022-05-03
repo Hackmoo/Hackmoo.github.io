@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Homework Converter </title>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="MyTheme.css">
+</head>
+<body>
+<div  class="container" id="app">
+
+<div class="card">
+<h1 class="MyCenter">Конвертер величин</h1>
+   <div class="form-control MyInput">
+       <input
+               type="number"
+               placeholder="Введите значение"
+               v-model="inputValue"
+       >
+      <div class="MyEquals">=</div>
+       <input
+               disabled
+               type="number"
+               class="MyInput"
+               placeholder="0"
+               :value="cmp"
+
+
+       >
+   </div>
+   <div class="form-control MyInput">
+       <select class="form-select" v-model="selected">
+           <option disabled value=""> Выберите значение</option>
+           <option value="1">Сантиметры</option>
+           <option value="2">Дециметры</option>
+           <option value="3">Метры</option>
+           <option value="4">Километры</option>
+       </select>
+       <div class="MyEquals2"></div>
+       <select class="form-select" v-model="selected2">
+           <option disabled value=""> Выберите значение</option>
+           <option value="1" >Сантиметры</option>
+           <option value="2">Дециметры</option>
+           <option value="3">Метры</option>
+           <option value="4">Километры</option>
+       </select>
+   </div>
+
+
+
+    <div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<script src="https://unpkg.com/vue@next"></script>
+<script src="app.js"></script>
+</body>
+</html>
