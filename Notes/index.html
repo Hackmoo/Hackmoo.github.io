@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<div class="container" id="app">
+    <div class="card">
+        <h1 :style="{
+        color: inputValue.length < 5 ? 'green' : 'darkred',
+        fontSize : '50px'
+         }">Список заметок</h1>
+        <div class="form-control">
+            <input
+                    type="text"
+                    :placeholder="placeholderS"
+                    v-model="inputValue"
+                    @keypress.enter="addHandler"
+
+            >
+        </div>
+        <button class="btn primary" @click="addHandler()">Добавить</button>
+        <button class="btn danger" @click="delHandlerAll()">Очистить</button>
+        <hr />
+        <ul class="list" v-if="notes.length!== 0">
+            <li class="list-item" v-for="(note, i) in notes">
+             <span :class="{
+                'danger': true,
+                'primary': note.length <= 8
+             }">{{ i + 1}}| {{ toUpperCase(note) }} </span>
+                <button class="btn danger" @click="delHandler(i)">Удалить</button>
+            </li>
+            <hr />
+            <li>
+                <strong>Общее количество заметок: {{ notes.length }} || Удвоенное количество заметок {{ doubleCount }}</strong>
+            </li>
+        </ul>
+        <div v-else>
+            <strong>Заметок нет</strong>
+            <hr />
+            <strong>Общее количество заметок: {{ notes.length }} || Удвоенное количество заметок {{ doubleCount }}</strong>
+        </div>
+
+
+    </div>
+</div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src ="app.js"></script>
+    </body>
+</html>
