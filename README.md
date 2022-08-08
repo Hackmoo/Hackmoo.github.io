@@ -1,7 +1,24 @@
-# Hackmo2004.github.io
-АБОБА
+# yaumniy
 
+## Project setup
+```
+npm install
+```
 
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-[Говно сайт](https://hackmo2004.github.io/HW1/index.html "Сайт ура") - Я что-то сделал
-[Говно сайт2](https://hackmo2004.github.io/Notes/index.html "Сайт ура") - Я что-то сделал2
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
